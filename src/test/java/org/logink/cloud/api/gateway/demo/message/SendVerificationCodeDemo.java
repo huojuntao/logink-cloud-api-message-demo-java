@@ -41,6 +41,12 @@ public class SendVerificationCodeDemo {
 	    //appkey
 	    headers.put("X-Ca-Key", appkey);
 	    List<String> signHeaderPrefixList = new ArrayList<String>();
+		/**
+		* 重要提示如下:
+		* SignUtils请从
+		* https://github.com/huojuntao/logink-cloud-api-message-demo-java/tree/master/src/main/java/org/logink/cloud/api/gateway/demo/util/SignUtils.java
+		* 下载
+		*/
 	    //签名
 	    headers.put("X-Ca-Signature", SignUtils.sign(appsecret, headers, signHeaderPrefixList));
 
